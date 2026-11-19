@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide &amp; Tracker — Road to the Platinum</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="title">
+    <h1>GTA VI Trophy Guide</h1>
+    <p class="sub">All 55 PS5 trophies &middot; road to the platinum &middot; works offline</p>
+  </div>
+  <div class="progress" id="progressBox">
+    <div class="big" id="progressBig">0 / 55 earned</div>
+    <div class="bar"><div class="fill" id="progressFill"></div></div>
+    <div class="grades" id="gradeCounts"></div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button type="button" data-tab="tracker" class="active">Tracker</button>
+  <button type="button" data-tab="roadmap">Roadmap</button>
+  <button type="button" data-tab="missables">Missables</button>
+  <button type="button" data-tab="sources">Sources</button>
+</nav>
+
+<section class="nextup" id="nextUp"></section>
+
+<section class="controls" id="controls">
+  <input id="search" type="search" placeholder="Search trophies by name or description&hellip;" aria-label="Search trophies">
+  <label>Kind
+    <select id="kind">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="activities">Activities</option>
+      <option value="online">Online (none)</option>
+    </select>
+  </label>
+  <label>Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label>Show
+    <select id="earnedFilter">
+      <option value="all">All trophies</option>
+      <option value="earned">Earned only</option>
+      <option value="unearned">Not yet earned</option>
+    </select>
+  </label>
+  <label class="check"><input id="spoilers" type="checkbox"> Hide spoilers (hidden trophies stay secret until earned)</label>
+  <button id="export" type="button">Export progress</button>
+  <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+</section>
+
+<main id="view"></main>
+
+<footer>
+  <p>Official trophy names, descriptions and grades as published by PlayStation (Exophase / PSNProfiles lists, 18 Nov 2026). Guides are written in our own words; every guide names its sources. No Rockstar artwork, logos or game screenshots are used. Difficulty 4/10, about 200 hours to the platinum (PowerPyx). No online trophies. Cheats disable trophies and saving.</p>
+  <p class="srcs">Guide sources: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx GTA 6 Trophy Guide &amp; Roadmap</a> &middot; <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase official trophy list</a> &middot; <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles official trophy list</a> &middot; <a href="https://outputlag.com/guides/gta-6-trophy-list/">OutputLag trophy list (hidden / visible split)</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

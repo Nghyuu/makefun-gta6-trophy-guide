@@ -1,0 +1,114 @@
+/* GTA VI trophy guide: own look, no game art. Dark neon Vice palette, big type. */
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0 28px 40px;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #171226; color: #f2eefb; font-size: 17px; line-height: 1.5;
+}
+a { color: #7fe3ff; }
+.top {
+  display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  align-items: flex-start; padding: 22px 0 10px;
+  border-bottom: 3px solid #ff5da2;
+}
+h1 { margin: 0; font-size: 40px; line-height: 1.05; letter-spacing: -0.5px; color: #ffffff; }
+.sub { margin: 6px 0 0; color: #c9bfe0; font-size: 18px; }
+.progress { min-width: 320px; }
+.big { font-size: 30px; font-weight: 800; color: #ffd166; }
+.bar { height: 14px; background: #2c2547; border-radius: 7px; overflow: hidden; margin: 6px 0; }
+.fill { height: 100%; background: linear-gradient(90deg, #ff5da2, #ffd166); width: 0%; }
+.grades { font-size: 15px; color: #d8cfee; }
+.grades b { color: #fff; }
+.tabs { display: flex; gap: 8px; margin: 16px 0 0; }
+.tabs button {
+  font-size: 18px; font-weight: 700; padding: 10px 22px; cursor: pointer;
+  background: #241d3d; color: #e6defa; border: 2px solid #4a3d75; border-radius: 10px 10px 0 0;
+}
+.tabs button.active { background: #ff5da2; border-color: #ff5da2; color: #1a1026; }
+.nextup {
+  background: #241d3d; border: 2px solid #ffd166; border-radius: 12px;
+  padding: 14px 18px; margin: 14px 0 0; font-size: 18px;
+}
+.nextup b { color: #ffd166; }
+.controls {
+  display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+  background: #201a33; border: 1px solid #4a3d75; border-radius: 12px;
+  padding: 12px 14px; margin: 14px 0 18px;
+}
+.controls input[type="search"] {
+  flex: 1 1 260px; font-size: 17px; padding: 9px 12px; border-radius: 8px;
+  border: 2px solid #4a3d75; background: #171226; color: #fff;
+}
+.controls select {
+  font-size: 16px; padding: 8px; border-radius: 8px;
+  border: 2px solid #4a3d75; background: #171226; color: #fff;
+}
+.controls label { font-size: 15px; color: #d8cfee; }
+.controls .check { font-size: 16px; color: #fff; }
+.controls button, .import {
+  font-size: 16px; font-weight: 700; padding: 9px 16px; cursor: pointer;
+  background: #ffd166; color: #1a1026; border: none; border-radius: 8px;
+}
+.import input { display: none; }
+.controls label.import { color: #1a1026; }
+.count { font-size: 16px; color: #c9bfe0; margin: 0 0 10px; }
+.card {
+  background: #221b38; border: 1px solid #4a3d75; border-radius: 12px;
+  padding: 14px 16px; margin: 0 0 12px;
+}
+.card.earned { border-color: #37d67a; background: #1d2f26; }
+.card.missable { border-color: #ff5da2; border-width: 2px; }
+.card-head { display: flex; gap: 12px; align-items: flex-start; }
+.card-head input[type="checkbox"] { width: 26px; height: 26px; margin-top: 4px; flex: none; accent-color: #37d67a; cursor: pointer; }
+.card h2 { margin: 0; font-size: 22px; line-height: 1.2; }
+.card h2 .num { color: #8f83b3; font-size: 17px; font-weight: 600; margin-right: 8px; }
+.desc { margin: 4px 0 0; color: #d8cfee; font-size: 17px; }
+.tags { margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  font-size: 14px; font-weight: 700; padding: 3px 10px; border-radius: 20px;
+  background: #3a2f5e; color: #efe9ff; text-transform: uppercase; letter-spacing: 0.4px;
+}
+.tag.platinum { background: #7fe3ff; color: #10222b; }
+.tag.gold { background: #ffd166; color: #3a2c00; }
+.tag.silver { background: #d7dbe2; color: #222; }
+.tag.bronze { background: #e09a6a; color: #2b1600; }
+.tag.hidden { background: #5b2a4a; color: #ffb3d1; }
+.tag.missable { background: #ff5da2; color: #1a1026; }
+.tag.target { background: #2c2547; color: #ffd166; text-transform: none; }
+.guide { margin: 12px 0 0; font-size: 17px; background: #171226; border-left: 4px solid #ff5da2; padding: 12px 14px; border-radius: 0 8px 8px 0; }
+.guide p { margin: 0; }
+.guide .src { margin-top: 10px; font-size: 15px; color: #a99cc9; }
+.guide .src a { color: #7fe3ff; }
+.guide-toggle {
+  margin-top: 10px; font-size: 16px; font-weight: 700; padding: 7px 14px; cursor: pointer;
+  background: #3a2f5e; color: #fff; border: 1px solid #6b5a9e; border-radius: 8px;
+}
+.stage { margin: 0 0 26px; }
+.stage h2 { font-size: 26px; margin: 0 0 4px; color: #ffd166; }
+.stage p { margin: 0 0 12px; color: #c9bfe0; font-size: 17px; }
+.stage ol { margin: 0; padding-left: 26px; }
+.stage li { margin: 7px 0; font-size: 18px; }
+.stage li .g { color: #8f83b3; font-size: 15px; text-transform: uppercase; }
+.stage li.done { color: #7ee2a8; text-decoration: line-through; }
+.stage li.done .g { text-decoration: none; }
+.alert {
+  background: #3d1226; border: 2px solid #ff5da2; border-radius: 12px;
+  padding: 16px 18px; margin: 0 0 16px; font-size: 18px;
+}
+.alert h2 { margin: 0 0 6px; color: #ff8fbf; font-size: 24px; }
+.alert p { margin: 8px 0; }
+.callout { background: #221b38; border: 1px solid #4a3d75; border-radius: 12px; padding: 16px 18px; margin: 0 0 16px; font-size: 17px; }
+.callout h2 { margin: 0 0 8px; font-size: 23px; }
+.callout h3 { margin: 14px 0 4px; font-size: 19px; color: #ffd166; }
+.callout ul { margin: 6px 0; padding-left: 22px; }
+.callout li { margin: 5px 0; }
+.src-list { font-size: 17px; }
+.src-list li { margin: 10px 0; }
+footer { margin-top: 30px; border-top: 1px solid #4a3d75; padding-top: 14px; color: #a99cc9; font-size: 15px; }
+footer .srcs { font-size: 15px; }
+.empty { font-size: 18px; color: #c9bfe0; padding: 20px; }
+@media (max-width: 700px) {
+  body { padding: 0 14px 30px; font-size: 16px; }
+  h1 { font-size: 30px; }
+  .big { font-size: 24px; }
+}
